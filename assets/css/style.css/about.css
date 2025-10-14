@@ -1,0 +1,523 @@
+/*
+   =====================================
+   溫暖優雅 - 莫蘭迪米杏色 CSS 樣式表
+   設計原則: 柔和強調色、留白空間、知性氛圍
+   =====================================
+*/
+
+/* 1. 基本設定與顏色變數 (莫蘭迪米杏色方案) */
+:root {
+    --primary-color: #4A4A4A;      /* 主色：深灰色 (用於標題、主要文字) */
+    --accent-color: #B5998E;       /* 強調色：莫蘭迪米杏 (用於連結、按鈕) */
+    --background-color: #FBFBFB;   /* 背景色：近乎白色 (大量留白) */
+    --text-color: #4A4A4A;         /* 內文顏色：深灰色 */
+    --light-text-color: #8C8C8C;   /* 輔助文字顏色：中灰色 */
+    --border-color: #E0E0E0;       /* 邊框顏色：淺灰色 */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 使用清晰的無襯線字體 */
+    font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-top: 80px; 
+}
+
+/* 2. 導覽列 (Navigation Bar) */
+.main-header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-size: 1rem;
+}
+
+.main-nav li a:hover {
+    color: var(--accent-color); /* 懸停時使用莫蘭迪米杏色 */
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* 3. 首頁區塊 (Hero Section) */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8% 5%;
+    min-height: calc(100vh - 80px); 
+}
+
+.hero-content {
+    flex: 1;
+}
+.centered-heading {
+   
+    text-align: center !important; 
+    
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--accent-color);
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    font-family: 'Shippori Mincho B1', serif;
+
+}
+.centered-paragraph {
+    /* 1. 設置置中對齊 */
+    text-align: center; 
+    
+    /* 2. 限制最大寬度，防止段落過寬 (可選，但讓置中看起來更美觀) */
+    max-width: 650px; 
+    
+    /* 3. 將容器本身置中 */
+    margin: 30px auto; 
+    padding: 0 20px;
+}
+.centered-paragraph {
+    text-align: center; 
+
+    max-width: 1000px; 
+   
+    margin: 30px auto; 
+    padding: 0 20px;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--light-text-color);
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--accent-color); /* 按鈕底色使用莫蘭迪米杏色 */
+    color: var(--background-color); /* 白字 */
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px; /* 柔和的圓角 */
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+    background-color: transparent; /* 懸停時變透明 */
+    color: var(--accent-color); /* 字體變回莫蘭迪米杏色 */
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    /* 保持簡約，但移除強制黑白，讓圖片自然呈現色彩 */
+    filter: none; 
+    border-radius: 10px; /* 柔和的圓角 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* 柔和的陰影 */
+    border: 3px solid var(--accent-color); /* 使用莫蘭迪米杏色作為邊框點綴 */
+}
+
+
+/* 4. 通用內容區塊 (適用於其他頁面) */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    padding-top: 80px; 
+}
+
+.container h1 {
+    font-size: 2.2rem;
+     font-family: 'Shippori Mincho B1', serif; 
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-color); /* 使用強調色作底線 */
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+.container h2 {
+    font-size: 1.6rem; /* 🌟 修正：字體較小且優雅 🌟 */
+    font-family: 'Shippori Mincho B1', serif; /* 🌟 使用優雅字體 🌟 */
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    /* 增加點綴效果 */
+    padding-left: 10px;
+    border-left: 4px solid var(--accent-color); /* 左邊增加莫蘭迪色線條 */
+}
+.container h3 {
+    font-size: 1.4rem;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* ============================================== */
+/* 志工/興趣社團分類式結構樣式 */
+/* ============================================== */
+
+/* 總分類標題 (I. 志工服務社團 / II. 個人興趣社團) */
+.category-title {
+    font-size: 2rem;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-top: 60px;       /* 上方增加大量間距，區隔兩大類別 */
+    margin-bottom: 30px;    
+    padding-left: 15px; /* 增加左側內邊距，讓文字與直線有距離 */
+    border-bottom: none; /* 移除舊的水平底線 */
+    
+    /* 🌟 新增：左側垂直線 🌟 */
+    border-left: 5px solid var(--accent-color); /* 5px 寬的莫蘭迪米杏色垂直線 */
+}
+
+/* 每個社團的容器 (取代 journey-item 的大部分功能) */
+.club-item {
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 輕微陰影提升質感 */
+}
+
+/* 社團名稱 (H3) */
+.club-item h3 {
+    font-size: 1.6rem;
+    font-family: 'Shippori Mincho B1', serif;
+    color: var(--accent-color); /* 用莫蘭迪米杏色突出社團名稱 */
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+/* 社團總結/主題 */
+.summary-text {
+    font-size: 1.1rem;
+    color: var(--light-text-color);
+    margin-bottom: 25px;
+}
+
+/* 活動列表群組標題 */
+.activity-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* 活動列表 */
+.activity-list {
+    list-style: disc inside; 
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.activity-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* 心得區塊容器 */
+.reflection-box {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #f0e6e2; /* 淺米杏色邊框 */
+    border-radius: 5px;
+    background-color: #fcf6f4; /* 淺米杏色背景 */
+}
+
+/* 心得標題 */
+.reflection-heading {
+    font-size: 1.2rem;
+    color: var(--accent-color); 
+    font-family: 'Shippori Mincho B1', serif;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* 心得內容 */
+.reflection-text {
+    line-height: 1.7;
+    color: #555;
+    font-style: italic; /* 讓心得文字傾斜，與內容區分 */
+}
+
+/* 確保移除舊的時間軸樣式，例如 journey-item::before, border-left 等 */
+.journey-item {
+    border-left: none; /* 移除時間軸的垂直線 */
+    padding-left: 0;
+}
+.journey-item::before {
+    content: none; /* 移除時間軸上的圓點 */
+}
+
+/* 5. 頁尾 */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--border-color);
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+}
+
+h2.travel-destination {
+    font-size: 1.8rem;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 50px;       /* 上方增加大量間距，與上一組內容區隔 */
+    margin-bottom: 20px;    /* 下方增加與照片的間距 */
+    text-align: left;       /* 確保小標題靠左對齊 */
+    
+    /* 新增一個細節底線，增加質感 */
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+/* 旅遊照片容器樣式 (負責橫向捲動和圖片佈局) */
+.travel-image {
+
+    display: flex; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    max-width: 100%; 
+    padding: 10px 0; 
+    gap: 15px; 
+    -webkit-overflow-scrolling: touch; 
+}
+/* 🌟 新增：單張圖片的包裝層 🌟 */
+.image-frame {
+    /* 統一設定尺寸 (你可以調整這些數值) */
+    width: 280px;        
+    height: 350px;       /* 設置一個固定高度，讓直式和橫式照片都能容納 */
+    
+    flex-shrink: 0;      /* 關鍵：防止被 Flexbox 壓縮 */
+    
+    border-radius: 8px;  
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;    /* 關鍵：裁剪掉不屬於照片框的部分 */
+    position: relative;
+    
+    /* 讓圖片垂直置中 */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    
+    background-color: #eee; /* 如果圖片載入慢，先顯示灰色背景 */
+    transition: transform 0.3s;
+}
+
+.image-frame:hover {
+    transform: scale(1.03); 
+}
+.travel-image img {
+    height: 100%;
+    width: 100%;  
+    object-fit: cover;      
+    border-radius: 0;  
+    margin-right: 0; 
+    box-shadow:none;
+
+}
+
+
+/* 懸停放大效果 (可選，增加互動性) */
+.travel-image img:hover {
+    transform: scale(1.03); 
+}
+
+/* 移除最後一張圖片的右邊距 */
+.travel-image img:last-child {
+    margin-right: 0;
+}
+/* 6. 社團足跡 (Journey) 樣式 - 簡潔時間軸 */
+.journey-item {
+    margin-bottom: 40px;
+    padding-left: 30px;
+    border-left: 3px solid var(--border-color);
+    position: relative;
+}
+
+.journey-item h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.journey-item .timeframe {
+    font-style: italic;
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+}
+
+.journey-item ul {
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+.journey-item::before {
+    /* 時間軸上的圓點 */
+    content: ''; 
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-color); /* 使用莫蘭迪米杏色圓點 */
+    border-radius: 50%;
+}
+
+/* 7. 聯絡頁面表單樣式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px; /* 柔和的圓角 */
+    transition: border-color 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color); /* 聚焦時顯示莫蘭迪米杏色 */
+    outline: none;
+}
+
+/* 聯絡頁面：美化聯絡資訊列表 */
+
+.contact-details {
+    /* 讓整個聯絡資訊區塊置中 */
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+}
+
+.contact-list {
+    list-style: none; /* 移除預設的點點 */
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* 圖示樣式 */
+.contact-list .icon {
+    font-size: 1.5rem;
+    color: var(--accent-color); /* 🌟 使用莫蘭迪米杏色作為圖示顏色 🌟 */
+    width: 30px; /* 給圖示一個固定寬度 */
+    text-align: center;
+    margin-right: 15px;
+}
+
+/* 連結樣式 */
+.contact-list li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.contact-list li a:hover {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color); /* 懸停時出現莫蘭迪色底線 */
+}
+
+/* RWD 調整 */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+        order: -1; 
+    }
+
+    .main-nav ul {
+        gap: 0;
+    }
+}
