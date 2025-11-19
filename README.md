@@ -4,7 +4,9 @@
 
 作業一:個人網站(https://yu072333.github.io/yu072333/)
 
-作業二:
+作業二:台北城市儀表板(https://www.youtube.com/watch?v=y-We1f51TAI)
+
+串接AI(https://studio.youtube.com/video/pKYrGgAluNw/edit)
 
 
 作業三:個人網站+API Github(https://github.com/yu072333/react-portfolio)
