@@ -11,6 +11,8 @@
 
 作業三:個人網站+API Github(https://github.com/yu072333/react-portfolio)
 
+影片說明(https://youtu.be/1Z_tykxyvS8)
+
 作業四:Render(https://react-portfolio-x2py.onrender.com/#header)
 
 
